@@ -29,7 +29,7 @@ Doctorant Track  is a comprehensive web-based application designed to manage PhD
 7. **Email Integration** - Password reset and notification capabilities
 
 ---
-## 🎬 Démonstration vidéo
+## 🎬 Demo Video
 
 https://github.com/user-attachments/assets/c345abda-7aa5-45bf-94f6-87fda2ebef42
 

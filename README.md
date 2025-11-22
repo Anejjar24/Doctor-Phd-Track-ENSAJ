@@ -6,71 +6,15 @@ Doctorant Track  is a comprehensive web-based application designed to manage PhD
 
 **In simple terms**: It's an application that helps universities manage PhD applications from submission to acceptance/rejection with status tracking and document management.
 
+<img width="1920" height="784" alt="Image" src="https://github.com/user-attachments/assets/a03b1404-6f6c-478f-9871-0742b84f1e57" />
+
+
+<img width="1920" height="928" alt="Image" src="https://github.com/user-attachments/assets/95eae1e4-e3e3-4c7c-a6ab-15a3589d12f0" />
+
+
 ---
 
-## 🏗️ Architecture Overview
 
-Doctorant Track follows a **traditional monolithic MVC (Model-View-Controller) architecture** built with Laravel 11, combining server-side rendering with modern frontend tooling.
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    USER INTERFACE LAYER                      │
-│          Blade Templates + Bootstrap 5 + Vite               │
-├─────────────────────────────────────────────────────────────┤
-│  Admin Views: Dashboard, Candidatures, Doctorants          │
-│  User Views: Profile, Thesis, Upload, Status               │
-│  Public: Homepage, Auth Pages                              │
-└─────────┬───────────────────────────────────────────────────┘
-          │ HTTP Requests (Laravel Routing)
-          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    ROUTING & MIDDLEWARE LAYER                │
-│                  routes/web.php + Middleware                │
-├─────────────────────────────────────────────────────────────┤
-│  ProtectedRoutes: Auth Guards                              │
-│  RoleBasedRoutes: is_admin, soumis middlewares              │
-└─────────┬───────────────────────────────────────────────────┘
-          │ Route Dispatch
-          ▼
-┌─────────────────────────────────────────────────────────────┐
-│               CONTROLLER & BUSINESS LOGIC LAYER              │
-│                 Http/Controllers/*Controller                │
-├─────────────────────────────────────────────────────────────┤
-│  AdminDashboardController: Manage candidatures & doctorants│
-│  HomeController: User dashboard                            │
-│  profileController: Edit personal info                     │
-│  zipController: Handle file uploads/downloads              │
-│  Auth Controllers: Login/Register (Laravel defaults)       │
-└─────────┬───────────────────────────────────────────────────┘
-          │ Model Queries & Data Operations
-          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    DATA MODEL LAYER                          │
-│                  app/Models/User.php                        │
-├─────────────────────────────────────────────────────────────┤
-│  User Model: Eloquent ORM for authentication & data        │
-│  Relationships: Managed via User model                     │
-└─────────┬───────────────────────────────────────────────────┘
-          │ Database Queries
-          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    DATABASE LAYER                            │
-│              SQLite / MySQL Database                        │
-├─────────────────────────────────────────────────────────────┤
-│  users table: Doctorants & Admins                          │
-│  password_reset_tokens: Password recovery                  │
-│  sessions: User sessions                                   │
-└─────────┬───────────────────────────────────────────────────┘
-          │
-          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    FILE STORAGE LAYER                        │
-│            public/uploads/doctorants/zipFiles/              │
-├─────────────────────────────────────────────────────────────┤
-│  ZIP Files: Thesis documents uploaded by candidates        │
-│  Public Assets: Static resources (CSS, JS, images)         │
-└─────────────────────────────────────────────────────────────┘
-```
 
 ---
 
@@ -85,7 +29,11 @@ Doctorant Track follows a **traditional monolithic MVC (Model-View-Controller) a
 7. **Email Integration** - Password reset and notification capabilities
 
 ---
+## 🎬 Démonstration vidéo
 
+https://github.com/user-attachments/assets/c345abda-7aa5-45bf-94f6-87fda2ebef42
+
+---
 ## 📁 Project Structure
 
 ```
@@ -124,7 +72,7 @@ appg/
 | PHP 8.2+     | Server language |
 | Blade        | Template engine |
 | Bootstrap 5  | CSS framework   |
-| SQLite/MySQL | Database        |
+|MySQL         | Database        |
 | Vite         | Build tool      |
 | Eloquent     | ORM             |
 | SweetAlert   | Notifications   |

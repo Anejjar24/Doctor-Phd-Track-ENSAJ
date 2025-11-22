@@ -1,0 +1,51 @@
+<?php
+/*
+
+namespace App\Http\Requests\Users;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class updateProfileRequest extends FormRequest
+{
+    
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+    
+    public function rules(): array
+    {
+        return [
+
+            'prenom'=>'required',
+                'nom'=>'required',
+                'CIN'=>'required',
+                'date_de_naissance'=>'required',
+                'email'=>'required|email',
+                'telephone'=>'required',
+                'adresse'=>'required',
+
+                //////////////
+                'titre'=>'nullable',
+                'description'=>'nullable',
+                'laboratoire'=>'nullable',
+                'date_inscription'=>'nullable',
+                'directeur'=>'nullable',
+                'codirecteur'=>'nullable',
+                'photo'=>'nullable',
+              
+              
+    
+            
+            
+           
+
+        ];
+    }
+}
+*/

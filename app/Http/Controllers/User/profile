@@ -1,0 +1,91 @@
+<?php
+
+namespace App\Http\Controllers\User;
+
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\Users\updateProfileRequest;
+
+/*class profileController extends Controller
+
+{
+
+    public function edit()
+    {
+        $user =auth()->user();
+        return view('dashfinal.user.total',compact('user'));
+    }
+
+
+    public function update(updateProfileRequest $request)
+    {
+        $user =auth()->user();
+
+        $validatedData = $request->validate([
+            'nom' => 'required',
+            'prenom' => 'required',
+            'CIN'=>'required',
+            'date_de_naissance'=>'required',
+
+            'telephone' => 'required',
+            'adresse' => 'required',
+
+            'email'=>'required|email',
+
+
+            ///////////////
+
+            'titre' => 'nullable',
+            'description' => 'nullable',
+            'laboratoire'=>'nullable',
+            'date_inscription'=>'nullable',
+
+            'directeur' => 'nullable',
+            'codirecteur' => 'nullable',
+
+          
+
+           'photo' => 'nullable',
+
+           
+            // Add any other validation rules here
+        ]);
+
+        $user->nom = $validatedData['nom'];
+        $user->prenom = $validatedData['prenom'];
+        // Assign other request data to user attributes as needed
+        $user->CIN = $validatedData['CIN'];
+        $user->date_de_naissance = $validatedData['date_de_naissance'];
+
+        $user->telephone = $validatedData['telephone'];
+        $user->adresse = $validatedData['adresse'];
+
+        $user->email = $validatedData['email'];
+
+        //////////
+
+        
+        $user->titre = $validatedData['titre'];
+        $user->description = $validatedData['description'];
+        
+        $user->laboratoire = $validatedData['laboratoire'];
+        $user->date_inscription = $validatedData['date_inscription'];
+
+        $user->directeur = $validatedData['directeur'];
+        $user->codirecteur = $validatedData['codirecteur'];
+
+        $user->photo = $validatedData['photo'];
+       
+
+        
+        $user->save();
+       
+        
+        return back();
+       
+    }
+
+}

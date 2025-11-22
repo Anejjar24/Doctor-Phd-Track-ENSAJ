@@ -1,0 +1,13 @@
+ <!--  action="{{ route('user.update',$User->id) }}" -->
+ value="{{ $user->prenom }}"
+ value="{{ $user->nom }}"
+ value="{{ $user->CIN }}"
+ value="{{ $user->date_de_naissance }}"
+ value="{{ $user->email }}"
+ value="{{ $user->titre }}"
+ value="{{ $user->description }}"
+ value="{{ $user->laboratoire }}"
+ value="{{ $user->date_inscription }}"
+ value="{{ $user->directeur }}"
+ value="{{ $user->codirecteur }}"
+ value="{{ $user->photo }}"
